@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$message = $_POST["message"];
 
 	// Підготовка електронного листа
-	$to = "адресапошти_отримувача@example.com";
+	$to = "адреexampleсапошти_отримувача@.com";
 	$subject = "Нове повідомлення від $name";
 	$headers = "From: $email\r\n";
 	$headers .= "Reply-To: $email\r\n";
