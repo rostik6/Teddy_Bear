@@ -34,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	// Підготовка електронного листа
 	$to = "rostikglovac@gmail.com";
+
 	$subject = "Нове повідомлення від $name";
 //	$headers = "From: $email\r\n";
 //	$headers .= "Reply-To: $email\r\n";
