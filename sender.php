@@ -28,22 +28,24 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	// Отримання даних з форми
 	$name = $_POST["name"];
-	$email = $_POST["email"];
+//	$email = $_POST["email"];
 	$message = $_POST["message"];
+    $comment = $_POST["comment"];
 
 	// Підготовка електронного листа
-	$to = "адреexampleсапошти_отримувача@.com";
+	$to = "rostikglovac@gmail.com";
 	$subject = "Нове повідомлення від $name";
-	$headers = "From: $email\r\n";
-	$headers .= "Reply-To: $email\r\n";
-	$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+//	$headers = "From: $email\r\n";
+//	$headers .= "Reply-To: $email\r\n";
+//	$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
 	$mailBody = "Ім'я: $name<br>";
-	$mailBody .= "Email: $email<br>";
+//	$mailBody .= "Email: $email<br>";
 	$mailBody .= "Повідомлення:<br>$message";
+	$mailBody .= "Кількість штук:<br>$comment";
 
 	// Відправлення листа
-	if (mail($to, $subject, $mailBody, $headers)) {
+	if (mail($to, $subject, $mailBody)) {
 		echo "Лист успішно відправлено.";
 	} else {
 		echo "Помилка при відправленні листа.";
