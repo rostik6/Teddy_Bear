@@ -380,24 +380,22 @@
 
             <form id="order_form" class="order_form" action="sender.php" method="POST">
                 <div class="btn-block">
-                    <select name="comment" class="field" required="">
-                        <option value="1" data-number="1" selected="">▼ Обрати кiлькiсть (шт.)</option>
-                        <option value="1" data-number="1">1 шт = 799 грн ( Без знижки )</option>
-                        <option value="2" data-number="2">2 шт = 1520 грн ( знижка 5% )</option>
-                        <option value="3" data-number="3">3 шт = 2128 грн ( знижка 9% )</option>
+                    <select name="order" class="field" required="true">
+                        <option value="0" data-number="1" selected="">▼ Обрати кiлькiсть (шт.)</option>
+                        <option value="1" data-number="1">1 шт = 799 грн ( знижка 30% )</option>
+                        <option value="2" data-number="2">2 шт = 1520 грн ( знижка 35% )</option>
+                        <option value="3" data-number="3">3 шт = 2128 грн ( знижка 39% )</option>
                     </select>
                 </div>
 
                 <div class="btn-block">
-<!--                    <input class="field" type="text" name="name" placeholder="Введіть ваше ім&#39;я" required="">-->
-                    <label for="">Введіть ваше ім'я</label>
-                    <input type="text" class="form-control" id="" name="user_name" placeholder="Наприклад,Іван">
+                    <input id="name"class="field" type="text" name="user_name" placeholder="Введіть ваше ім&#39;я" required="true">
                 </div>
                 <div class="btn-block">
-                    <input class="field" type="tel" name="phone" minlength="8" maxlength="15"
-                           placeholder="Введіть Ваш телефон" required="">
-                    <label for="">Введите номер телефона</label>
-                    <input type="text" class="form-control" id="" name="user_phone" placeholder="+ 380 99 99 99 999">
+
+                    <input id="phone" class="field" type="tel" name="user_phone" minlength="9" maxlength="9"
+                            placeholder="Введіть ваш номер телефону" required="true">
+
                 </div>
                 <div class="btn-block">
                     <button class="button">Придбати зараз</button>

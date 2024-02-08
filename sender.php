@@ -63,12 +63,30 @@
 
 $name = $_POST['user_name'];
 $phone = $_POST['user_phone'];
+$order= $_POST['order'];
 //$email = $_POST['user_email'];
 $token = "6400834996:AAE2HdNEdx4QyPS__sHqJxSDG78uC5F3WNQ";
 $chat_id = "6735144234";
+
+    switch ($order) {
+        case 1:
+            $order_text = "1 штука, ціна - 799 грн";
+            break;
+        case 2:
+            $order_text = "2 штуки, ціна - 1520 грн";
+            break;
+        case 3:
+            $order_text = "3 штуки, ціна- 2128 грн ";
+            break;
+        default:
+            $order_text = "Виникла помилка замовлення, або значення не обрано";
+            break;
+}
+
 $arr = array(
-    'Имя пользователя: ' => $name,
+    'Имя користувача: ' => $name,
     'Телефон: ' => $phone,
+    'Замовлення:' => $order
 //    'Email' => $email
 );
 
